@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>複利の世界 - 資産運用シミュレーション</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0369a1",
+                        "primary-dark": "#075985",
+                        "btn-primary": "#61dce8",
+                        "btn-primary-hover": "#4dbac5",
+                        secondary: "#EBE3D3",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#111f21",
+                        "text-main": "#453F39",
+                        "text-muted": "#7A736B",
+                        "button-text": "#332D29",
+                        "card-border": "#E6E1D6",
+                        "accent-pastel-blue": "#C7D2FE",
+                        "accent-pastel-green": "#BBF7D0",
+                        "bg-beige": "#FDFBF7",
+                    },
+                    fontFamily: {
+                        display: "Manrope",
+                        body: ["Noto Sans JP", "sans-serif"],
+                    },
+                    boxShadow: {
+                        soft: "0 10px 40px -10px rgba(69, 63, 57, 0.08)",
+                        glow: "0 0 20px -5px rgba(3, 105, 161, 0.3)",
+                        "pastel-btn": "0 10px 20px -5px rgba(97, 220, 232, 0.3)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', 'Noto Sans JP', sans-serif;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        .text-balance {
+            text-wrap: balance;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-background-light text-text-main antialiased">
+    <div id="root"></div>
+</body>
+</html>
